@@ -8,4 +8,4 @@ patchesStrategicMerge:
 
 replicas:
   - name: redis
-    count: 10
+    count: 2
