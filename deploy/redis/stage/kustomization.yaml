@@ -5,3 +5,7 @@ resources:
 patchesStrategicMerge:
   - deployment.yaml
   - service.yaml
+
+replicas:
+  - name: redis
+    count: 10
