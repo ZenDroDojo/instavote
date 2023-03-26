@@ -5,6 +5,10 @@ resources:
 patchesStrategicMerge:
   - deployment.yaml
 
+images:
+  - name: schoolofdevops/vote
+    newTag: v2
+
 replicas:
   - name: vote
     count: 2
@@ -17,3 +21,7 @@ commonLabels:
 
 commonAnnotations:
   supported-by: "support-sre@prod.com"
+
+configMapGenerator:
+  - name: vote-options
+    env: options.env
