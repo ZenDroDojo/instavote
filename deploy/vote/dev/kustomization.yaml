@@ -2,8 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../base
-patchesStrategicMerge:
-  - deployment.yaml
+
+patches:
+  - path: deployment.yaml
 
 images:
   - name: schoolofdevops/vote
@@ -24,4 +25,5 @@ commonAnnotations:
 
 configMapGenerator:
   - name: vote-options
-    env: options.env
+    envs: 
+     - options.env
