@@ -8,7 +8,7 @@ patches:
 
 images:
   - name: schoolofdevops/vote
-    newTag: v2
+    newTag: v4
 
 replicas:
   - name: vote
@@ -25,5 +25,5 @@ commonAnnotations:
 
 configMapGenerator:
   - name: vote-options
-    envs: 
-     - options.env
+    envs:
+      - options.env
