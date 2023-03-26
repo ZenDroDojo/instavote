@@ -4,3 +4,16 @@ resources:
 - ../base
 patchesStrategicMerge:
   - deployment.yaml
+
+replicas:
+  - name: vote
+    count: 2
+
+namespace: instavote
+
+commonLabels:
+  project: instavote
+  env: dev
+
+commonAnnotations:
+  supported-by: "support-sre@prod.com"
