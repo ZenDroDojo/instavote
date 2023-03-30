@@ -9,7 +9,7 @@ patches:
 
 images:
 - name: schoolofdevops/vote
-  newTag: v4
+  newTag: v5
 
 replicas:
 - count: 5
